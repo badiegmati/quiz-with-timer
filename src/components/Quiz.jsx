@@ -6,7 +6,7 @@ const Quiz = ({ questions, studentName, onComplete }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
   const [showFeedback, setShowFeedback] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(11);
+  const [timeLeft, setTimeLeft] = useState(30);
   const [answerTime, setAnswerTime] = useState(0);
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -32,7 +32,7 @@ const Quiz = ({ questions, studentName, onComplete }) => {
 
   // Réinitialiser le timer quand on change de question
   useEffect(() => {
-    setTimeLeft(11);
+    setTimeLeft(30);
     setAnswerTime(0);
   }, [currentQuestionIndex]);
 
@@ -54,7 +54,7 @@ const Quiz = ({ questions, studentName, onComplete }) => {
         userAnswer: 'Aucune réponse',
         correctAnswer: currentQuestion.correctAnswer,
         isCorrect: false,
-        timeSpent: 11
+        timeSpent: 30
       };
       
       setAnswers([...answers, answerRecord]);
