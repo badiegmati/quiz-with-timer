@@ -39,7 +39,7 @@ export const quizQuestions: Question[] = [
   {
     id: 6,
     question: "Quelle est l’Accessoire dernier cri ?",
-    options: ["blow", "", "flow", "aucun"],
+    options: ["blow", "plow", "flow", "aucun"],
     correctAnswer: "flow"
   },
   {
